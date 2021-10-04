@@ -10,3 +10,6 @@ resource "hcp_consul_cluster" "example_hcp" {
   tier            = "development"
 #   public_endpoint = true
 }
+
+provider "hcp" {
+}
