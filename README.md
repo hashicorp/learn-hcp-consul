@@ -4,8 +4,8 @@ Supplemental repository for Learn content on [HashiCorp Cloud Platform](https://
 
 The repository contains the following folders:
 
-- `hcp_tf`: Terraform example configuration to deploy a Consul cluster on HCP.
-- `hcp_tf_vpc`: Terraform example configuration to deploy a Consul cluster on 
+- `hcp_consul_base`: Terraform example configuration to deploy a Consul cluster on HCP.
+- `hcp_consul_vpc`: Terraform example configuration to deploy a Consul cluster on 
 HCP, deploy a VPC on AWS and peer the VPC with the HashiCorp Virtual Network (HVN).
 
 
