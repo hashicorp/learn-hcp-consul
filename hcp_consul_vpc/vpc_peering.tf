@@ -30,3 +30,12 @@ resource "aws_vpc_peering_connection_accepter" "peer" {
   auto_accept               = true
 }
 
+data "aws_route_table" "peer" {
+  vpc_id = aws_vpc.peer.id
+}
+
+resource "aws_route" "peer_route" {
+  route_table_id            = data.aws_route_table.peer.id
+  destination_cidr_block    = hcp_hvn.example_hvn.cidr_block
+  vpc_peering_connection_id = hcp_aws_network_peering.peer.provider_peering_id
+}
